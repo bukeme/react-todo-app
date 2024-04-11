@@ -1,0 +1,26 @@
+.input-component {
+	position: relative;
+	margin: 40px 0 20px;
+}
+
+input {
+	border: none;
+	outline: none;
+	background-color: var(--item-background-color);
+	padding: 20px 20px 18px 60px;
+	border-radius: 5px;
+	width: 100%;
+	color: var(--todo-text-color);
+}
+
+.input-component__circle {
+	width: 23px;
+	height: 23px;
+	border: 1px solid var(--grayish-blue-1);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	cursor: pointer;
+}

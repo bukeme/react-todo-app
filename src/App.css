@@ -1,0 +1,17 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-image: var(--background-image);
+  background-position: left top, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100vw 35vh, cover;
+  display: flex;
+  flex-direction: column;
+/*  justify-content: center;*/
+  align-items: center;
+  padding: 40px;
+}
+
+.App > * {
+  width: 500px;
+}

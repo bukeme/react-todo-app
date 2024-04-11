@@ -1,0 +1,51 @@
+.todo-items-component {
+	background-color: var(--item-background-color);
+	border-radius: 5px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+.todo-item {
+	color: var(--todo-text-color);
+	padding: 20px 20px 18px 60px;
+	border-bottom: 1px solid var(--grayish-blue-1);
+	position: relative;
+}
+
+.input-component__circle.completed {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to bottom right, var(--gradient-color-1), var(--gradient-color-2));
+}
+
+.todo-item-empty {
+	padding: 20px;
+	border-bottom: 1px solid var(--grayish-blue-1);
+	text-align: center;
+	color: var(--grayish-blue-2);
+}
+
+.todo-items-nav {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	font-weight: 500;
+	color: hsl(236, 9%, 61%);
+}
+
+.todo-items-nav__item:not(.todo-items-nav__item:first-child) {
+	cursor: pointer;
+}
+
+.todo-items-nav__item.mid {
+	margin: 0 5px;
+}
+
+.todo-items-nav__item:first-child {
+	margin-right: auto;
+}
+
+.todo-items-nav__item:last-child {
+	margin-left: auto;
+}
