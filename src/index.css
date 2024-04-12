@@ -5,11 +5,14 @@ body {
 
   --gray-1: hsl(0, 0%, 98%);
   --item-background-color: white;
-  --todo-text-color: hsl(237, 14%, 26%);
+  --todo-text-color: hsl(235, 19%, 35%);
+  --todo-item-border: hsl(236, 33%, 92%);
   --grayish-blue-1: hsl(236, 33%, 92%);
   --grayish-blue-2: hsl(233, 11%, 84%);
   --grayish-blue-3: hsl(236, 9%, 61%);
   --grayish-blue-4: hsl(235, 19%, 35%);
+  --nav-item-hover: hsl(235, 21%, 11%);
+  --completed-task: hsl(233, 11%, 84%);
   --background-image: url('./assets/bg-desktop-light.jpg'), linear-gradient(hsl(0, 0%, 98%), hsl(0, 0%, 98%));
 }
 
@@ -17,11 +20,15 @@ body[data-theme='dark'] {
   --dark-blue-1: hsl(235, 21%, 11%);
   --dark-blue-2: hsl(235, 24%, 19%);
   --item-background-color: hsl(235, 24%, 19%);
+  --todo-text-color: hsl(234, 39%, 85%);
   --grayish-blue-1: hsl(234, 39%, 85%);
   --grayish-blue-2: hsl(236, 33%, 92%);
   --grayish-blue-3: hsl(234, 11%, 52%);
   --grayish-blue-4: hsl(233, 14%, 35%);
   --grayish-blue-5: hsl(237, 14%, 26%);
+  --nav-item-hover: hsl(0, 0%, 98%);
+  --todo-item-border: hsl(237, 14%, 26%);
+  --completed-task: hsl(233, 14%, 35%);
   --background-image: url('./assets/bg-desktop-dark.jpg'), linear-gradient(hsl(235, 21%, 11%), hsl(235, 21%, 11%));
 }
 
@@ -30,4 +37,5 @@ body[data-theme='dark'] {
   padding: 0;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
+  transition: all 0.2s ease-in-out;
 }

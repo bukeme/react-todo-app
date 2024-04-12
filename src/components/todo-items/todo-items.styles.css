@@ -7,8 +7,27 @@
 .todo-item {
 	color: var(--todo-text-color);
 	padding: 20px 20px 18px 60px;
-	border-bottom: 1px solid var(--grayish-blue-1);
+	border-bottom: 1px solid var(--todo-item-border);
 	position: relative;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.todo-item__text.completed {
+	text-decoration: line-through;
+	color: var(--completed-task);
+}
+
+.todo-item__icon-cross {
+	width: 12px;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.todo-item:hover .todo-item__icon-cross {
+	opacity: 1;
 }
 
 .input-component__circle.completed {
@@ -31,15 +50,23 @@
 	align-items: center;
 	font-size: 13px;
 	font-weight: 500;
-	color: hsl(236, 9%, 61%);
+	color: var(--grayish-blue-3);
 }
 
 .todo-items-nav__item:not(.todo-items-nav__item:first-child) {
 	cursor: pointer;
 }
 
+.todo-items-nav__item:hover:not(.todo-items-nav__item:first-child) {
+	color: var(--nav-item-hover);
+}
+
 .todo-items-nav__item.mid {
 	margin: 0 5px;
+}
+
+.todo-items-nav__item.mid.active {
+	color: var(--bright-blue);
 }
 
 .todo-items-nav__item:first-child {

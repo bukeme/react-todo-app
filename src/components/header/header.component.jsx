@@ -11,8 +11,8 @@ const HeaderComponent = () => {
 			<h1 className='header-component__title'>TODO</h1>
 			{
 				theme ?
-				<img src={iconSun} alt='icon-moon' /> :
-				<img src={iconMoon} alt='icon-sun' />
+				<img src={iconSun} alt='icon-moon' onClick={() => {toggleTheme()}} /> :
+				<img src={iconMoon} alt='icon-sun' onClick={() => {toggleTheme()}} />
 			}
 		</div>
 	)
