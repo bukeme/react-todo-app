@@ -3,7 +3,8 @@ import {AppContext} from './app.context';
 
 
 const AppContextProvider = ({children}) => {
-	const [todoItems, setTodoItems] = useState({});
+	let fetchedTodoItems = JSON.parse(localStorage.getItem('todoItems'));
+	const [todoItems, setTodoItems] = useState(fetchedTodoItems || {});
 	const [filter, setFilter] = useState('ALL');
 
 	const completedTasks = (completed=false) => {
@@ -36,18 +37,21 @@ const AppContextProvider = ({children}) => {
 	        completed: false
 	    };
 	    setTodoItems(newItem);
+	    localStorage.setItem('todoItems', JSON.stringify(newItem));
 	}
 
 	const removeTodoItem = (key) => {
 		let newItem = {...todoItems};
 		delete newItem[key];
 		setTodoItems(newItem);
+		localStorage.setItem('todoItems', JSON.stringify(newItem));
 	}
 
 	const toggleCompleteItem = (key) => {
 		let newItem = {...todoItems};
 		newItem[key].completed = !newItem[key].completed;
 		setTodoItems(newItem);
+		localStorage.setItem('todoItems', JSON.stringify(newItem));
 	}
 
 	return (
